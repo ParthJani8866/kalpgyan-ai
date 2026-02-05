@@ -38,6 +38,8 @@ import {
   ThumbsUp
 } from "lucide-react"
 import Image from "next/image"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
 
 export const metadata = {
   title: "KalpGyan AI – Concept-Based Learning for NEET, JEE & UPSC",
@@ -49,58 +51,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* NAVIGATION */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <div className="flex items-center gap-2">
-                <span className="flex items-center gap-2">
-                  <Image
-                    src="/logo.png" // placed in public/logo.png
-                    alt="KalpGyan AI Logo"
-                    width={150}
-                    height={50}
-                  />
-                </span>
-              </div>
-
-              <div className="hidden md:flex ml-12 space-x-1">
-                {['NEET', 'JEE', 'UPSC', 'Notes', 'Tests', 'Blog'].map((item) => (
-                  <a
-                    key={item}
-                    href={`/${item.toLowerCase()}`}
-                    className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 rounded-lg hover:bg-slate-50 transition-colors"
-                  >
-                    {item}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <button className="hidden md:flex items-center gap-2 px-4 py-2 text-sm text-slate-600 hover:text-slate-900">
-                <Search size={16} />
-                Search
-              </button>
-              <a
-                href="/login"
-                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600"
-              >
-                Login
-              </a>
-              <a
-                href="/signup"
-                className="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors"
-              >
-                Get Started
-              </a>
-              <button className="md:hidden p-2">
-                <Menu size={20} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+     <Header></Header>
 
       {/* HERO - More Compact */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
@@ -459,61 +410,7 @@ export default function HomePage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <span className="flex items-center gap-2">
-                  <Image
-                    src="/logo.png" // placed in public/logo.png
-                    alt="KalpGyan AI Logo"
-                    width={150}
-                    height={50}
-                  />
-                </span>
-              </div>
-              <p className="text-sm text-slate-600">
-                Concept-based learning platform for competitive exam aspirants.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-slate-900 mb-4">Exams</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="/neet" className="text-slate-600 hover:text-indigo-600">NEET Preparation</a></li>
-                <li><a href="/jee" className="text-slate-600 hover:text-indigo-600">JEE Preparation</a></li>
-                <li><a href="/upsc" className="text-slate-600 hover:text-indigo-600">UPSC Preparation</a></li>
-                <li><a href="/tests" className="text-slate-600 hover:text-indigo-600">Mock Tests</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-slate-900 mb-4">Resources</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="/blog" className="text-slate-600 hover:text-indigo-600">Study Blog</a></li>
-                <li><a href="/videos" className="text-slate-600 hover:text-indigo-600">Video Library</a></li>
-                <li><a href="/notes" className="text-slate-600 hover:text-indigo-600">PDF Notes</a></li>
-                <li><a href="/practicals" className="text-slate-600 hover:text-indigo-600">Virtual Labs</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-slate-900 mb-4">Company</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="/about" className="text-slate-600 hover:text-indigo-600">About Us</a></li>
-                <li><a href="/contact" className="text-slate-600 hover:text-indigo-600">Contact</a></li>
-                <li><a href="/privacy" className="text-slate-600 hover:text-indigo-600">Privacy Policy</a></li>
-                <li><a href="/terms" className="text-slate-600 hover:text-indigo-600">Terms of Service</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-slate-200 mt-8 pt-8 text-center text-sm text-slate-500">
-            <p>© {new Date().getFullYear()} KalpGyan AI. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+     <Footer></Footer>
     </div>
   )
 }
