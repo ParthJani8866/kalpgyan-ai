@@ -464,8 +464,14 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg"></div>
-                <span className="font-bold text-slate-900">KalpGyan AI</span>
+                <span className="flex items-center gap-2">
+                  <Image
+                    src="/logo.png" // placed in public/logo.png
+                    alt="KalpGyan AI Logo"
+                    width={150}
+                    height={50}
+                  />
+                </span>
               </div>
               <p className="text-sm text-slate-600">
                 Concept-based learning platform for competitive exam aspirants.
