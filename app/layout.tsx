@@ -1,6 +1,7 @@
 import "./globals.css"
 import type { Metadata } from "next"
 import localFont from "next/font/local"
+import CookieConsent from "./components/CookieConsent"
 
 const satoshi = localFont({
   src: [
@@ -34,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${satoshi.variable} font-sans bg-slate-50 text-slate-900`}>
+        <CookieConsent />
         {children}
       </body>
     </html>
