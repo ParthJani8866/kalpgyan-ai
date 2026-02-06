@@ -24,7 +24,7 @@ export const metadata = {
 const biologySyllabus = [
   {
     title: "Diversity in Living World",
-    slug: "/neet/biology/diversity-in-living-world",
+    slug: "/neet/biology/botany/class-11/diversity-in-living-world",
     topics: [
       "Living World",
       "Biological Classification",
