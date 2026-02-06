@@ -46,7 +46,7 @@ export default function ContactForm() {
                         <div className="mt-6 space-y-4 text-sm text-slate-700">
                             <div className="flex items-center gap-3">
                                 <Mail className="text-indigo-600" />
-                                support@kalpgyan.ai
+                                support@kalpgyanai.com
                             </div>
 
                             <div className="flex items-center gap-3">

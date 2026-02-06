@@ -127,7 +127,7 @@ export default function PrivacyPolicyPage() {
           </p>
 
           <p className="font-medium mt-2">
-            support@kalpgyan.ai
+            support@kalpgyanai.com
           </p>
 
         </div>
